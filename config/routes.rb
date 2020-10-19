@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       # resources :cities, only: [:index, :show]
       # resources :countries, only: [:index, :show]
 
-      resources :resources 
+      resources :resources, only: [:index, :show, :update]
 
     end
   end
