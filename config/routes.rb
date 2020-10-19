@@ -2,12 +2,13 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :offers, param: :param_param, only: [:index]
-      # resources :cities, only: [:index, :show]
-      # resources :countries, only: [:index, :show]
+      resources :offers, only: [:index]
+      resources :resources, only: [:index, :create]
 
-      resources :resources, only: [:index, :show, :create]
+      resources :cities, path: 'cities/:offset/:country/', only: [:index]
+      resources :cities, path: 'cities/:offset/', only: [:index]
 
+      resources :countries, only: [:index]
     end
   end
 
