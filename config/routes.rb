@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :offers, path: "offers/:qwe_qwe/:qwe_qwe_qwe", only: [:index, :show]
+      resources :offers, param: :param_param, only: [:index]
       # resources :cities, only: [:index, :show]
       # resources :countries, only: [:index, :show]
 
